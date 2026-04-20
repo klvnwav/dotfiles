@@ -1,0 +1,1 @@
+/home/klvn/.config/i3
