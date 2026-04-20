@@ -1,0 +1,4 @@
+[global]
+font = JetBrainsMono 10
+frame_width = 2
+corner_radius = 8
