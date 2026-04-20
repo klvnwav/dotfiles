@@ -1,54 +1,10 @@
-
 configuration {
-modi: "drun";
-font: "JetBrains Mono 11";
-show-icons: false;
+    modi: "drun";
+    show-icons: false;
+    font: "JetBrains Mono 11";
+    width: 350px;
+    lines: 8;
 }
 
-* {
-  bg: #2f343f;
-  fg: #d3dae3;
-  accent: #5294e2;
-
-  background-color: @bg;
-  text-color: @fg;
-  }
-
-window {
-width: 350px;
-location: center;
-padding: 12px;
-}
-
-mainbox {
-spacing: 8px;
-}
-
-inputbar {
-background-color: transparent;
-}
-
-prompt {
-enabled: false;
-}
-
-entry {
-placeholder: "type...";
-placeholder-color: #7c818c;
-}
-
-listview {
-lines: 8;
-fixed-height: true;
-scrollbar: false;
-}
-
-element {
-padding: 3px;
-}
-
-element selected {
-background-color: @accent;
-text-color: #ffffff;
-}
+@theme "klvn"
 

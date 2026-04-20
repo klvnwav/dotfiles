@@ -1,0 +1,48 @@
+* {
+    bg: #2f343f;
+    fg: #d3dae3;
+    accent: #5294e2;
+
+    background-color: @bg;
+    text-color: @fg;
+}
+
+window {
+    width: 350px;
+    padding: 12px;
+    location: center;
+    border-radius: 2px;
+}
+
+mainbox {
+    spacing: 8px;
+}
+
+inputbar {
+    padding: 8px;
+    background-color: transparent;
+}
+
+entry {
+    placeholder: " type...";
+    placeholder-color: #7c818c;
+}
+
+listview {
+    lines: 8;
+    fixed-height: true;
+    scrollbar: false;
+}
+
+element {
+    padding: 4px;
+    border-radius: 0px;
+}
+
+element selected {
+
+    background-color: #252a34;  
+    text-color: @fg;
+    
+}
+

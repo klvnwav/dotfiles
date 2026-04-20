@@ -1,0 +1,11 @@
+font_family JetBrainsMono Nerd Font
+font_size 12
+enable_audio_bell no
+cursor_shape block
+scrollback_lines 10000
+
+
+# BEGIN_KITTY_THEME
+# Ghostty Default
+include current-theme.conf
+# END_KITTY_THEME
