@@ -27,7 +27,7 @@ exec --no-startup-id xfce4-clipman
 exec --no-startup-id lxqt-policykit-agent
 
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/alena-aenami-autumn-in-budapest.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/alena-aenami-horizon.png
 
 # Lock screen (sleep handling)
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -44,16 +44,21 @@ bindsym $mod+d exec rofi -show drun
 bindsym Print exec flameshot gui
 bindsym $mod+q kill
 
+# Power Menu
+bindsym XF86PowerOff exec --no-startup-id ~/.config/i3/power-menu.sh
+
 # =========================
 # AUDIO
 # =========================
 
 set $refresh_i3status killall -SIGUSR1 i3status
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+
 
 # =========================
 # WINDOW BEHAVIOR
@@ -63,7 +68,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 for_window [class=".*"] border pixel 2
-
+for_window [class="Yad"] floating enable, resize set 220 120, move position center
 default_border pixel 2
 default_floating_border pixel 2
 
